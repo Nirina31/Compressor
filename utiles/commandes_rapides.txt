@@ -1,0 +1,21 @@
+1. Installer la bibliothèque requise :
+   pip install -r requirements.txt
+
+2. Lancer la démonstration des algorithmes du cours :
+   python compressor.py --demo-cours
+
+3. Lancer le benchmark comparatif sur les 4 types de fichiers :
+   python compressor.py benchmark
+
+4. Utiliser les compresseurs individuellement :
+   # bzip2
+   python compressor.py bzip2 -c tests/texte.txt
+   python compressor.py bzip2 -d tests/texte.txt.bz2
+
+   # lzma
+   python compressor.py lzma -c tests/audio.wav
+   python compressor.py lzma -d tests/audio.wav.xz
+
+   # 7-zip
+   python compressor.py 7z -c tests/image.bmp
+   python compressor.py 7z -d tests/image.bmp.7z -o dossier_destination/
